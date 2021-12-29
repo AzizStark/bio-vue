@@ -3,7 +3,7 @@
     <div class="my-info">
       <router-link to="/"> <profile-image /> </router-link>
       <p>Name: Aziz Rahman</p>
-      <p>Work: Developer (Web), Designer (UI/UX)</p>
+      <p>Work: Developer(Web) & Designer(UI/UX)</p>
       <p>Country of Origin: India</p>
       <p>Age: {{ getAge() }}</p>
     </div>
@@ -43,19 +43,22 @@ export default defineComponent({
   border: 2px solid rgba(255, 255, 255, 0.15);
   white-space: pre;
   word-wrap: break-word;
-  font-family: inherit;
   text-align: left;
 }
 p {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
+  line-height: 30px;
   text-decoration: none;
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .my-info {
     padding: 4rem 5% 5% 5%;
+  }
+  p {
+    font-size: 15px;
   }
 }
 </style>

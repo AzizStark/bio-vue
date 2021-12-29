@@ -1,12 +1,32 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <img alt="Background" class="background" src="./assets/bg.jpeg" />
   <router-view />
 </template>
 
+<script lang="ts">
+export default {
+  name: "Home",
+  mounted(): void {
+    try {
+      console.log("Mounting");
+    } catch (error) {
+      console.error("Error in mounted");
+    }
+  },
+};
+</script>
+
 <style lang="scss">
+.background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  z-index: -10;
+  object-fit: cover;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,16 +35,12 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+a {
+  text-decoration: none;
 }
 </style>
